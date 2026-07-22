@@ -1,0 +1,10 @@
+{
+  "name": "Curtain Canvas",
+  "short_name": "Curtain Canvas",
+  "description": "Luxury made-to-measure curtains in Dhaka, Bangladesh.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0908",
+  "theme_color": "#0a0908",
+  "icons": [{ "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
