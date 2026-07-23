@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://curtaincanvas.store/sitemap.xml
+Sitemap: tailoreditbd.github.io/curtaincanvas/sitemap.xml
