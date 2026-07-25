@@ -91,7 +91,38 @@
                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                <div class="collapse navbar-collapse" id="mainNav">
                   <ul class="navbar-nav mx-auto">
-                     <li class="nav-item"><a class="nav-link" href="#collection">Collection</a></li>
+                     <li class="nav-item dropdown collection-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#collection" id="collectionDropdown" role="button" data-bs-toggle="dropdown" data-bs-auto-close="true" data-bs-display="static" aria-expanded="false">Curtain collection</a>
+                        <div class="dropdown-menu collection-mega-menu" aria-labelledby="collectionDropdown">
+                           <div class="collection-menu-head"><span>Explore by category</span><a href="#collection">View all curtains <i class="bi bi-arrow-up-right"></i></a></div>
+                           <div class="collection-menu-grid">
+                              <section class="collection-menu-group" aria-labelledby="interior-menu-title">
+                                 <a class="collection-category-title" id="interior-menu-title" href="#interior-curtains"><span>01</span> Interior curtains</a>
+                                 <ul>
+                                    <li><a href="#residential-curtain-type">Residential curtain type</a></li>
+                                    <li><a href="#commercial-curtain-type">Commercial curtain type</a></li>
+                                    <li><a href="#hospitality-curtain-type">Hospitality curtain type</a></li>
+                                 </ul>
+                              </section>
+                              <section class="collection-menu-group" aria-labelledby="seasonal-menu-title">
+                                 <a class="collection-category-title" id="seasonal-menu-title" href="#seasonal-curtains"><span>02</span> Seasonal curtains</a>
+                                 <ul class="seasonal-menu-list">
+                                    <li><a href="#summer-curtain-type">Summer-curtain type</a></li>
+                                    <li><a href="#rainy-curtain-type">Rainy season curtain type</a></li>
+                                    <li><a href="#autumn-curtain-type">Autumn curtains type</a></li>
+                                    <li><a href="#late-autumn-curtain-type">Late- Autumn curtains type</a></li>
+                                    <li><a href="#winter-curtain-type">Winter- Curtain type</a></li>
+                                    <li><a href="#spring-curtain-type">Spring- Curtain type</a></li>
+                                 </ul>
+                              </section>
+                              <section class="collection-menu-group collection-menu-custom" aria-labelledby="custom-menu-title">
+                                 <a class="collection-category-title" id="custom-menu-title" href="#customized-curtains"><span>03</span> Customized curtains</a>
+                                 <p>Made-to-measure curtain solutions tailored to your space, style and functional needs.</p>
+                                 <a class="collection-menu-cta" href="#consultation">Request consultation <i class="bi bi-arrow-right"></i></a>
+                              </section>
+                           </div>
+                        </div>
+                     </li>
                      <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                      <li class="nav-item"><a class="nav-link" href="#process">Our process</a></li>
                      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
@@ -213,7 +244,7 @@
                      </article>
                   </div>
                </div> -->
-               <div class="row mt-5 align-items-start gy-4 reveal">
+               <div class="row mt-5 align-items-start gy-4 reveal" id="interior-curtains">
                   <div class="col-lg-4">
                      <h2>Interior curtains</h2>
                   </div>
@@ -227,7 +258,7 @@
                             <img src="https://images.unsplash.com/photo-1615471618985-97108e2ba478?auto=format&fit=crop&w=900&q=85" alt="Soft sheer curtains in a modern residence" width="900" height="750" loading="lazy">
                             <div>
                               <p>01 / Residential</p>
-                              <h3>Residential curtain type</h3>
+                              <h3 id="residential-curtain-type">Residential curtain type</h3>
                               <span>Quiet comfort, beautifully framed.</span>
                             </div>
                         </article>
@@ -237,7 +268,7 @@
                             <img src="https://images.pexels.com/photos/37525071/pexels-photo-37525071.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Curtains in an elegant commercial interior" width="900" height="750" loading="lazy">
                             <div>
                               <p>02 / Workspace</p>
-                              <h3>Commercial curtain type</h3>
+                              <h3 id="commercial-curtain-type">Commercial curtain type</h3>
                               <span>Polished solutions that perform.</span>
                             </div>
                         </article>
@@ -247,7 +278,7 @@
                             <img src="https://images.pexels.com/photos/16138445/pexels-photo-16138445.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Curtains in a luxury hospitality interior" width="900" height="750" loading="lazy">
                             <div>
                               <p>03 / Hospitality</p>
-                              <h3>Hospitality curtain type</h3>
+                              <h3 id="hospitality-curtain-type">Hospitality curtain type</h3>
                               <span>Memorable rooms, exacting detail.</span>
                             </div>
                         </article>
@@ -273,7 +304,7 @@
                         <img src="assets/img/editorial/season-summer.jpg" alt="Airy ivory sheer summer curtains in natural light" width="512" height="512" loading="lazy">
                         <div>
                            <p>01 / Summer</p>
-                           <h3>Summer-curtain type</h3>
+                           <h3 id="summer-curtain-type">Summer-curtain type</h3>
                            <span>Quiet comfort, beautifully framed.</span>
                         </div>
                      </article>
@@ -283,7 +314,7 @@
                         <img src="assets/img/editorial/season-rainy.jpg" alt="Slate blue curtains styled for the rainy season" width="512" height="512" loading="lazy">
                         <div>
                            <p>02 / Rainy</p>
-                           <h3>Rainy season curtain type</h3>
+                           <h3 id="rainy-curtain-type">Rainy season curtain type</h3>
                            <span>Polished solutions that perform.</span>
                         </div>
                      </article>
@@ -293,7 +324,7 @@
                         <img src="assets/img/editorial/season-autumn.jpg" alt="Rust and olive curtains for an autumn interior" width="512" height="512" loading="lazy">
                         <div>
                            <p>03 / Autumn</p>
-                           <h3>Autumn curtains type</h3>
+                           <h3 id="autumn-curtain-type">Autumn curtains type</h3>
                            <span>Memorable rooms, exacting detail.</span>
                         </div>
                      </article>
@@ -303,7 +334,7 @@
                         <img src="assets/img/editorial/season-late-autumn.jpg" alt="Warm taupe layered curtains for late autumn" width="512" height="512" loading="lazy">
                         <div>
                            <p>01 / Late</p>
-                           <h3>Late- Autumn curtains type</h3>
+                           <h3 id="late-autumn-curtain-type">Late- Autumn curtains type</h3>
                            <span>Quiet comfort, beautifully framed.</span>
                         </div>
                      </article>
@@ -313,7 +344,7 @@
                         <img src="assets/img/editorial/season-winter.jpg" alt="Deep cocoa thermal curtains for winter comfort" width="512" height="512" loading="lazy">
                         <div>
                            <p>02 / Winter</p>
-                           <h3>Winter- Curtain type</h3>
+                           <h3 id="winter-curtain-type">Winter- Curtain type</h3>
                            <span>Polished solutions that perform.</span>
                         </div>
                      </article>
@@ -323,7 +354,7 @@
                         <img src="assets/img/editorial/season-spring.jpg" alt="Fresh sage floral curtains for spring" width="512" height="512" loading="lazy">
                         <div>
                            <p>03 / Spring</p>
-                           <h3>Spring- Curtain type</h3>
+                           <h3 id="spring-curtain-type">Spring- Curtain type</h3>
                            <span>Memorable rooms, exacting detail.</span>
                         </div>
                      </article>
