@@ -113,3 +113,16 @@ p{color:rgba(255,255,255,.9)}
 .hero-shade{z-index:1}
 .hero-content,.hero-stats{z-index:2}
 @media(prefers-reduced-motion:reduce){.hero-background{transition:none}}
+/* Homepage About split: editorial image left, content right */
+.intro{background:#0e0c0a}
+.intro-layout{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(45px,7vw,105px);align-items:center}
+.intro-media{position:relative;min-height:620px;overflow:hidden}
+.intro-media::after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.09);box-shadow:inset 0 0 90px rgba(0,0,0,.2)}
+.intro-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .8s ease}
+.intro-media:hover img{transform:scale(1.025)}
+.intro .intro-panel{max-width:720px}
+.intro .intro-panel h2{margin:18px 0 28px}
+.intro .intro-copy{max-width:none}
+.intro .intro-copy p{color:rgba(255,255,255,.88)}
+@media(max-width:991.98px){.intro-layout{grid-template-columns:1fr}.intro-media{min-height:520px}.intro .intro-panel{max-width:820px}}
+@media(max-width:767.98px){.intro-media{min-height:430px}}
