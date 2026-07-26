@@ -81,3 +81,35 @@ p{color:rgba(255,255,255,.9)}
 @media(max-width:991.98px){.site-header .nav-link{font-size:.72rem}.trust-grid-wide{grid-template-columns:repeat(2,minmax(0,1fr))}.process-grid article:hover{transform:none}.intro-panel{max-width:760px}}
 @media(max-width:767.98px){.section-dark,.section-light{padding:68px 0}.eyebrow{font-size:.62rem;letter-spacing:.21em}.hero-carousel .carousel-indicators{bottom:0}.trust-grid-wide{grid-template-columns:1fr}.trust-grid-wide article{min-height:auto}.intro{background-position:center}.intro-panel h2{margin-bottom:24px}}
 @media(prefers-reduced-motion:reduce){.process-grid article,.process-grid article::after,.trust-grid-wide article{transition:none}}.section-dark p,.section-dark .section-heading p:last-child,.process-grid p,.quality-grid p,.story-card>p:not(.eyebrow),.site-footer p{color:rgba(255,255,255,.88)}
+/* Hero backgrounds, centered pagination and responsive collection carousel */
+.hero{--hero-image:url("../img/hero-luxury-v2.jpg");background-image:var(--hero-image);background-position:center;background-size:cover}
+.hero-carousel{width:100%;max-width:none}
+.hero-carousel .carousel-indicators{left:50%;right:auto;transform:translateX(-50%);width:max-content;margin-inline:0}
+.collection-carousel{position:relative}
+.collection-carousel-viewport{overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
+.collection-carousel-viewport::-webkit-scrollbar{display:none}
+.collection-carousel-track{display:flex;gap:16px}
+.collection-slide{flex:0 0 calc((100% - 32px)/3);min-width:0;scroll-snap-align:start}
+.collection-carousel-controls{display:flex;align-items:center;justify-content:flex-end;gap:18px;margin-top:24px;color:#aaa195;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase}
+.collection-carousel-controls button{width:46px;height:46px;border:1px solid rgba(215,190,150,.3);border-radius:50%;background:transparent;color:#fff;transition:background-color .25s,border-color .25s,color .25s,opacity .25s}
+.collection-carousel-controls button:hover:not(:disabled){background:var(--gold);border-color:var(--gold);color:#0a0908}
+.collection-carousel-controls button:disabled{opacity:.28;cursor:not-allowed}
+.premium-features-section .btn-outline-gold{color:#211c16;background:#fff;border-color:#a87836;box-shadow:0 10px 28px rgba(42,31,18,.12)}
+.premium-features-section .btn-outline-gold:hover{color:#fff;background:#9b6c2e;border-color:#9b6c2e}
+.site-footer h2{color:#fff}
+@media(max-width:991.98px){.collection-slide{flex-basis:calc((100% - 16px)/2)}}
+@media(max-width:767.98px){.collection-slide{flex-basis:100%}.collection-carousel-controls{justify-content:center}.hero-carousel .carousel-indicators{left:50%}}
+@media(prefers-reduced-motion:reduce){.collection-carousel-viewport{scroll-behavior:auto}}
+/* Full-bleed images synchronized with the four hero slides */
+.hero{background:#090806}
+.hero-backgrounds,.hero-background{position:absolute;inset:0}
+.hero-backgrounds{z-index:0;overflow:hidden}
+.hero-background{opacity:0;transition:opacity 1s ease}
+.hero-background.active{opacity:1}
+.hero-background img{width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.84) contrast(1.05)}
+.hero-background:nth-child(2) img{object-position:center 43%}
+.hero-background:nth-child(3) img{object-position:center 55%}
+.hero-background:nth-child(4) img{object-position:center 48%}
+.hero-shade{z-index:1}
+.hero-content,.hero-stats{z-index:2}
+@media(prefers-reduced-motion:reduce){.hero-background{transition:none}}

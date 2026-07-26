@@ -61,5 +61,47 @@
     });
   });
 
+  const hero = document.querySelector('.hero');
+  const heroCarousel = document.getElementById('heroCarousel');
+  const heroBackgrounds = hero?.querySelectorAll('.hero-background') || [];
+  const setHeroBackground = (slide) => {
+    const slides = heroCarousel ? [...heroCarousel.querySelectorAll('.carousel-item')] : [];
+    const slideIndex = slides.indexOf(slide);
+    heroBackgrounds.forEach((background, index) => {
+      background.classList.toggle('active', index === slideIndex);
+    });
+  };
+  setHeroBackground(heroCarousel?.querySelector('.carousel-item.active'));
+  heroCarousel?.addEventListener('slide.bs.carousel', (event) => {
+    setHeroBackground(event.relatedTarget);
+  });
+
+  document.querySelectorAll('[data-collection-carousel]').forEach((carousel) => {
+    const viewport = carousel.querySelector('.collection-carousel-viewport');
+    const cards = carousel.querySelectorAll('.collection-slide');
+    const previous = carousel.querySelector('[data-carousel-prev]');
+    const next = carousel.querySelector('[data-carousel-next]');
+    const controls = carousel.querySelector('.collection-carousel-controls');
+
+    if (!viewport || cards.length <= 3) {
+      controls?.setAttribute('hidden', '');
+      return;
+    }
+
+    const updateControls = () => {
+      const maxScroll = viewport.scrollWidth - viewport.clientWidth;
+      previous.disabled = viewport.scrollLeft <= 2;
+      next.disabled = viewport.scrollLeft >= maxScroll - 2;
+    };
+    const move = (direction) => {
+      viewport.scrollBy({ left: viewport.clientWidth * direction, behavior: reduceMotion ? 'auto' : 'smooth' });
+    };
+
+    previous.addEventListener('click', () => move(-1));
+    next.addEventListener('click', () => move(1));
+    viewport.addEventListener('scroll', updateControls, { passive: true });
+    window.addEventListener('resize', updateControls);
+    updateControls();
+  });
   document.getElementById('year').textContent = new Date().getFullYear();
 })();
