@@ -9,7 +9,7 @@
 :root{--ink:#080705;--ink-2:#0d0b09;--paper:#e9e2d5;--muted:#968f84;--gold:#b88a4a;--line:rgba(215,190,150,.14);--serif:"Cormorant Garamond",Georgia,serif}
 body{background:var(--ink);font-size:14px;line-height:1.85;letter-spacing:.012em}
 h1,h2,h3,blockquote,.footer-brand{font-weight:300;line-height:.98;letter-spacing:-.035em}
-h1{font-size:clamp(4.5rem,7.7vw,8.4rem)}h2{font-size:clamp(2.8rem,4.8vw,5.2rem)}h3{letter-spacing:-.018em}
+h1{font-size:clamp(3.5rem,6.7vw,7.4rem)}h2{font-size:clamp(2.8rem,4.8vw,5.2rem)}h3{letter-spacing:-.018em}
 .container-wide{width:min(100% - 80px,1440px)}.section-dark,.section-light{padding:clamp(110px,10vw,175px) 0}
 .eyebrow{font-size:.57rem;letter-spacing:.31em}.eyebrow::before{width:46px;margin-right:16px;opacity:.75}
 .site-header{padding-top:7px}.site-header.scrolled{background:rgba(7,6,4,.88);border-color:rgba(255,255,255,.07)}
@@ -126,3 +126,17 @@ p{color:rgba(255,255,255,.9)}
 .intro .intro-copy p{color:rgba(255,255,255,.88)}
 @media(max-width:991.98px){.intro-layout{grid-template-columns:1fr}.intro-media{min-height:520px}.intro .intro-panel{max-width:820px}}
 @media(max-width:767.98px){.intro-media{min-height:430px}}
+/* Compact hero typography, tighter sections and premium-features image treatment */
+.hero-heading{display:block;max-width:820px;margin:0 0 30px;font-family:var(--serif);font-size:clamp(3.2rem,5.6vw,6.1rem);font-weight:400;line-height:.9;letter-spacing:-.04em;color:#f0ece3}
+.hero-carousel p,.hero-carousel .hero-copy{color:#fff}
+.section-dark,.section-light{padding:clamp(58px,5.5vw,88px) 0}
+.section-heading{margin-bottom:clamp(32px,4vw,52px)}
+.premium-features-section{position:relative;isolation:isolate;background:linear-gradient(90deg,rgba(7,5,4,.94),rgba(7,5,4,.85) 52%,rgba(7,5,4,.72)),url("../img/hero/slider-4-botanical-hd.jpg") center/cover no-repeat;color:#fff}
+.premium-features-section h2,.premium-features-section h3,.premium-features-section strong{color:#f4eee5}
+.premium-features-section p{color:rgba(255,255,255,.9)!important}
+.premium-features-section .benefit-list li{border-color:rgba(255,255,255,.15)}
+.premium-features-section .benefit-list span{color:#ddb36e}
+@media(max-width:767.98px){.hero-heading{max-width:360px;font-size:3.15rem;line-height:.94}.section-dark,.section-light{padding:52px 0}}
+
+/* Heading scale: standalone H3 headings sit just below H2 */
+h3{font-size:clamp(2rem,3.8vw,4rem)}
