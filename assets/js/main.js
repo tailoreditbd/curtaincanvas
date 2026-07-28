@@ -82,6 +82,9 @@
     const previous = carousel.querySelector('[data-carousel-prev]');
     const next = carousel.querySelector('[data-carousel-next]');
     const controls = carousel.querySelector('.collection-carousel-controls');
+    const autoMoveDelay = 4800;
+    let autoMoveTimer = null;
+    let isPaused = false;
 
     if (!viewport || cards.length <= 3) {
       controls?.setAttribute('hidden', '');
@@ -96,12 +99,63 @@
     const move = (direction) => {
       viewport.scrollBy({ left: viewport.clientWidth * direction, behavior: reduceMotion ? 'auto' : 'smooth' });
     };
+    const stopAutoMove = () => {
+      if (autoMoveTimer) window.clearInterval(autoMoveTimer);
+      autoMoveTimer = null;
+    };
+    const startAutoMove = () => {
+      stopAutoMove();
+      if (reduceMotion || isPaused || document.hidden) return;
+      autoMoveTimer = window.setInterval(() => {
+        const maxScroll = viewport.scrollWidth - viewport.clientWidth;
+        if (viewport.scrollLeft >= maxScroll - 2) {
+          viewport.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          move(1);
+        }
+      }, autoMoveDelay);
+    };
+    const restartAutoMove = () => {
+      stopAutoMove();
+      startAutoMove();
+    };
 
-    previous.addEventListener('click', () => move(-1));
-    next.addEventListener('click', () => move(1));
+    previous.addEventListener('click', () => {
+      move(-1);
+      restartAutoMove();
+    });
+    next.addEventListener('click', () => {
+      move(1);
+      restartAutoMove();
+    });
+    carousel.addEventListener('pointerenter', () => {
+      isPaused = true;
+      stopAutoMove();
+    });
+    carousel.addEventListener('pointerleave', () => {
+      isPaused = false;
+      startAutoMove();
+    });
+    carousel.addEventListener('focusin', () => {
+      isPaused = true;
+      stopAutoMove();
+    });
+    carousel.addEventListener('focusout', (event) => {
+      if (carousel.contains(event.relatedTarget)) return;
+      isPaused = false;
+      startAutoMove();
+    });
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) stopAutoMove();
+      else startAutoMove();
+    });
     viewport.addEventListener('scroll', updateControls, { passive: true });
-    window.addEventListener('resize', updateControls);
+    window.addEventListener('resize', () => {
+      updateControls();
+      restartAutoMove();
+    });
     updateControls();
+    startAutoMove();
   });
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
