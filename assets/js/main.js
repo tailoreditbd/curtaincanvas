@@ -56,8 +56,31 @@
 
   document.querySelectorAll('#mainNav a').forEach((link) => {
     link.addEventListener('click', () => {
+      const isMobileCategory = link.classList.contains('collection-category-title') && window.innerWidth < 992;
+      if (isMobileCategory) return;
       const openMenu = document.querySelector('#mainNav.show');
       if (openMenu && window.bootstrap) bootstrap.Collapse.getOrCreateInstance(openMenu).hide();
+    });
+  });
+
+  document.querySelectorAll('.collection-category-title').forEach((category) => {
+    category.setAttribute('aria-expanded', 'false');
+    category.addEventListener('click', (event) => {
+      if (window.innerWidth >= 992) return;
+      event.preventDefault();
+      event.stopPropagation();
+
+      const group = category.closest('.collection-menu-group');
+      const menu = category.closest('.collection-menu-grid');
+      if (!group || !menu) return;
+      const willOpen = !group.classList.contains('submenu-open');
+
+      menu.querySelectorAll('.collection-menu-group.submenu-open').forEach((openGroup) => {
+        openGroup.classList.remove('submenu-open');
+        openGroup.querySelector('.collection-category-title')?.setAttribute('aria-expanded', 'false');
+      });
+      group.classList.toggle('submenu-open', willOpen);
+      category.setAttribute('aria-expanded', String(willOpen));
     });
   });
 
@@ -156,6 +179,17 @@
     });
     updateControls();
     startAutoMove();
+  });
+  document.querySelectorAll('.video-carousel').forEach((carousel) => {
+    carousel.addEventListener('slide.bs.carousel', () => {
+      carousel.querySelectorAll('iframe[src*="youtube.com/embed/"]').forEach((frame) => {
+        frame.contentWindow?.postMessage(JSON.stringify({
+          event: 'command',
+          func: 'pauseVideo',
+          args: ''
+        }), 'https://www.youtube.com');
+      });
+    });
   });
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
