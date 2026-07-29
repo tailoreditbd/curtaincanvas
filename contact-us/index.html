@@ -89,12 +89,16 @@
               <div class="form-field"><label for="phone-number">Phone number <span aria-hidden="true">*</span></label><input id="phone-number" name="phoneDisplay" type="tel" autocomplete="tel" inputmode="tel" pattern="[+0-9() -]{7,20}" required></div>
               <input id="phone-submit" name="phone" type="hidden">
               <div class="form-field"><label for="email-address">Email <small>(optional)</small></label><input id="email-address" name="email" type="email" autocomplete="email"></div>
-              <div class="form-field"><label for="message">Message <span aria-hidden="true">*</span></label><textarea id="message" name="message" rows="6" minlength="10" required placeholder="Tell us about your room, windows, preferred style or service location."></textarea></div>
+              <div class="form-field"><label for="space-type">Type of Space <span aria-hidden="true">*</span></label><select id="space-type" name="spaceType" required><option value="" selected disabled>Select your space</option><option value="Home/Apartment">Home/Apartment</option><option value="Office Space">Office Space</option><option value="Hotel/Resort">Hotel/Resort</option></select></div>
+              <div class="form-field form-field-full"><label for="location-address">Location/Address <small>(optional)</small></label><textarea id="location-address" name="location" rows="5" placeholder="Enter the project or service location."></textarea></div>
+              <div class="form-field form-field-full file-upload-field"><label for="space-photos">Upload Photos of your Space <small>(optional)</small></label><input id="space-photos" type="file" accept="image/*" multiple><small class="field-help">Upload up to 3 images. Maximum 4 MB per image.</small><div class="selected-files" id="selected-files" aria-live="polite"></div></div>
+              <input id="photo-payload" name="photos" type="hidden" value="[]">
+              <input id="legacy-message" name="message" type="hidden">
               <input type="hidden" name="source" value="Curtain Canvas contact page">
               <div class="form-trap" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
               <button class="btn btn-ivory form-submit" type="submit">Send consultation request <i class="bi bi-arrow-up-right"></i></button>
               <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-              <p class="form-note">By submitting, you allow Curtain Canvas to contact you about this request. Your details are used only for consultation follow-up.</p>
+              <p class="form-note">By submitting, you allow Curtain Canvas to contact you about this request. Uploaded photos are stored privately in Curtain Canvas Google Drive and used only for consultation follow-up.</p>
             </form>
             <iframe class="visually-hidden" name="contact-submit-frame" title="Form submission response"></iframe>
           </div>
