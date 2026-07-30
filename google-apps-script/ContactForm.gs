@@ -1,6 +1,6 @@
 const SPREADSHEET_ID = '1kDyKjXqJsBaC0qbGrAqHScTP0NMNLqfx8igVdFIjLYo';
 const SHEET_NAME = 'web-booking-data';
-const UPLOAD_SITE_FOLDER = 'CurtainCanvas.com';
+const UPLOAD_SITE_FOLDER = 'CurtainCanvas.store';
 const UPLOAD_ROOT_FOLDER = 'client-booking-images';
 const HEADERS = [
   'Timestamp',
