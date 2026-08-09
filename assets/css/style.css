@@ -226,3 +226,5 @@ body{font-size:16px}
 @media(prefers-reduced-motion:reduce){
   .hero-background.active img,.hero-carousel .carousel-item.active .eyebrow,.hero-carousel .carousel-item.active .hero-heading,.hero-carousel .carousel-item.active .hero-copy,.hero-carousel .carousel-item.active>.d-flex,.video-carousel .carousel-item.active .video-story-card{animation:none;opacity:1;transform:none}
 }
+
+.trust-heading h3{color:#f2ede5;margin:18px 0 25px}
