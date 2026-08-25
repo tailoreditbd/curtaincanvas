@@ -1,2 +1,2 @@
 /* Paste the deployed Google Apps Script Web App /exec URL between the quotes. */
-window.CURTAIN_CANVAS_FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbw9mntlvrmafpevJNbuyldmj8kBUrRb7G6KX6rnzbWJFz5te8gN5LWdTtGIkjB6N_j1/exec';
+window.CURTAIN_CANVAS_FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxhoPue6bzcszAMjAr1FkHVvSEaKAolHnLBZkgmuleWG8eSn4awCHx93XpKlSW8N_ou/exec';
