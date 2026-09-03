@@ -108,3 +108,12 @@
 .field-help{color:#958c80;font-size:.72rem;line-height:1.6}
 .selected-files{display:grid;gap:5px;color:#d9cfbf;font-size:.75rem;line-height:1.5}
 .selected-files span::before{content:"✓";margin-right:8px;color:var(--gold)}
+
+/* About hero copy: "curtain brand in Bangladesh" links home + underline */
+.inner-hero a.home-link{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:rgba(226,197,154,.75);transition:color .25s,text-decoration-color .25s}
+.inner-hero a.home-link:hover{color:#fff;text-decoration-color:#fff}
+
+/* About contact section (doc copy) */
+.page-cta .signature{font-family:var(--serif);font-style:italic;color:#d8bd92;font-size:clamp(1.15rem,1.6vw,1.5rem);margin-top:6px}
+/* Keep the boxed Call/Email buttons but never uppercase the email address */
+.page-cta .btn .contact-email{text-transform:none;letter-spacing:0}
