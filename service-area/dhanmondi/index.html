@@ -86,32 +86,18 @@
                 letter-spacing: -0.035em;
                 margin: 15px 0 22px;
             }
-            /* Bold run-in step labels inside the installation process cards */
-            .service-card .step-title {
-                font-family: var(--serif);
-                font-size: 1.4rem;
-                line-height: 1.15;
-                letter-spacing: -0.02em;
-                color: #f0ece3;
-                margin: 14px 0;
-            }
-            .service-card .step-title strong {
-                font-weight: 400;
-            }
-            /* Underline text links so they read as links, not body copy */
-            main a:not(.btn):not(.related-link),
-            .site-footer a:not(.footer-brand) {
+            /* Underline text links in content so they read as links, not body copy */
+            main a:not(.btn):not(.related-link) {
                 text-decoration: underline;
                 text-decoration-thickness: 1px;
                 text-underline-offset: 0.18em;
                 text-decoration-color: rgba(184, 138, 74, 0.7);
             }
-            main a:not(.btn):not(.related-link):hover,
-            .site-footer a:not(.footer-brand):hover {
+            main a:not(.btn):not(.related-link):hover {
                 text-decoration-color: currentColor;
             }
-            /* Icon-only links stay clean */
-            .site-footer .socials a,
+            /* Footer links (address, phone, menu, socials, footer-bottom) stay clean — no underline */
+            .site-footer a,
             .floating-whatsapp {
                 text-decoration: none;
             }
@@ -434,19 +420,6 @@
                 </div>
                 </div>
             </section>
-            <section class="spaces section-dark" id="customized-curtains">
-                <div class="container-wide">
-                <div class="row section-intro-row align-items-start mb-5 gy-4 reveal">
-                    <div class="col-lg-4">
-                        <h3>Customized curtains</h3>
-                    </div>
-                    <div class="col-lg-7 offset-lg-1">
-                        <p>Every space is unique, and your curtains should reflect your style, dimensions, and functional needs. We create made-to-measure curtain solutions with premium fabrics, expert craftsmanship, and a flawless finish for every room.</p>
-                        <a class="btn btn-outline-gold" href="../../contact-us/">Contact Us for Curtain</a>
-                    </div>
-                </div>
-                </div>
-            </section>
             <section class="inner-section" aria-labelledby="curtain-services">
                 <div class="container-wide">
                     <div class="inner-heading reveal">
@@ -554,45 +527,33 @@
                     <div class="service-grid reveal">
                         <article class="service-card">
                             <span>01</span>
-                            <p class="step-title"><strong>Step 1: Consultation</strong></p>
-                            <p>
-                                We discuss your space, preferred design direction, functionality, privacy requirements, and expectations.
-                            </p>
+                            <p class="step-label"><strong>Consultation</strong></p>
+                            <p>We discuss your space, preferred design direction, functionality, privacy requirements, and expectations.</p>
                         </article>
                         <article class="service-card">
                             <span>02</span>
-                            <p class="step-title"><strong>Step 2: Fabric and catalogue selection</strong></p>
-                            <p>
-                                Suitable fabrics, colors, textures, linings, and curtain styles are shortlisted for the project.
-                            </p>
+                            <p class="step-label"><strong>Fabric and catalogue selection</strong></p>
+                            <p>Suitable fabrics, colors, textures, linings, and curtain styles are shortlisted for the project.</p>
                         </article>
                         <article class="service-card">
                             <span>03</span>
-                            <p class="step-title"><strong>Step 3: Measurement</strong></p>
-                            <p>
-                                Window dimensions and relevant installation points are measured carefully for accurate production.
-                            </p>
+                            <p class="step-label"><strong>Measurement</strong></p>
+                            <p>Window dimensions and relevant installation points are measured carefully for accurate production.</p>
                         </article>
                         <article class="service-card">
                             <span>04</span>
-                            <p class="step-title"><strong>Step 4: Design confirmation</strong></p>
-                            <p>
-                                Curtain style, fabric, length, layering, hardware and finishing details are finalized.
-                            </p>
+                            <p class="step-label"><strong>Design confirmation</strong></p>
+                            <p>Curtain style, fabric, length, layering, hardware and finishing details are finalized.</p>
                         </article>
                         <article class="service-card">
                             <span>05</span>
-                            <p class="step-title"><strong>Step 5: Custom production</strong></p>
-                            <p>
-                                The selected curtains are stitched and finished according to the approved measurements and specifications.
-                            </p>
+                            <p class="step-label"><strong>Custom production</strong></p>
+                            <p>The selected curtains are stitched and finished according to the approved measurements and specifications.</p>
                         </article>
                         <article class="service-card">
                             <span>06</span>
-                            <p class="step-title"><strong>Step 6: Installation</strong></p>
-                            <p>
-                                Curtains, rods, tracks and applicable systems are professionally fitted and checked at the site.
-                            </p>
+                            <p class="step-label"><strong>Installation</strong></p>
+                            <p>Curtains, rods, tracks and applicable systems are professionally fitted and checked at the site.</p>
                         </article>
                     </div>
                     <a class="btn btn-outline-gold mt-4" href="../../contact-us/">Get Free Consultation</a>
