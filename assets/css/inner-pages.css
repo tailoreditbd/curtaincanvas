@@ -115,5 +115,7 @@
 
 /* About contact section (doc copy) */
 .page-cta .signature{font-family:var(--serif);font-style:italic;color:#d8bd92;font-size:clamp(1.15rem,1.6vw,1.5rem);margin-top:6px}
-/* Keep the boxed Call/Email buttons but never uppercase the email address */
+/* Boxed Call/Email buttons: keep the text readable (and never uppercase the email address) */
+.page-cta a.btn[href^="tel:"]{font-size:clamp(.75rem,1.2vw,.95rem);letter-spacing:.03em;text-transform:none;line-height:1.4}
+.page-cta a.btn[href^="mailto:"]{font-size:clamp(.8rem,1.35vw,1rem);letter-spacing:.01em;text-transform:none;line-height:1.4}
 .page-cta .btn .contact-email{text-transform:none;letter-spacing:0}
