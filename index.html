@@ -42,6 +42,14 @@
           })(window, document, "clarity", "script", "xuicpt1y1o");
       </script>
 
+      <script>
+        /* Legacy /#about URLs now point to the dedicated About page. */
+        (function () {
+          var h = (window.location.hash || '').toLowerCase();
+          if (h.indexOf('#about') === 0) { window.location.replace('about/'); }
+        })();
+      </script>
+
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Best Luxury Curtain Shop in Bangladesh | Curtain Canvas</title>
       <meta name="description" content="Luxury and custom curtains in Bangladesh with expert consultation, premium fabrics, precise measurement, professional installation, and after-sales support.">
