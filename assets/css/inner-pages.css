@@ -163,3 +163,10 @@
 .blog-card-read i{transition:transform .3s ease}
 .blog-card:hover .blog-card-read i{transform:translateX(5px)}
 @media(max-width:991.98px){.blog-card-body h3{font-size:1.6rem!important}}
+
+/* Bilingual headings: keep Cormorant for English, bump Latin word runs so they read at the same visual size as বাংলা */
+.blog-article h1 .latin,
+.blog-article h2 .latin,
+.blog-article h3 .latin,
+.blog-article .inner-faq .accordion-button .latin,
+.blog-page .blog-card h3 .latin{font-size:1.16em}
