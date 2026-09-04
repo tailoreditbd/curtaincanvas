@@ -109,9 +109,9 @@
 .selected-files{display:grid;gap:5px;color:#d9cfbf;font-size:.75rem;line-height:1.5}
 .selected-files span::before{content:"✓";margin-right:8px;color:var(--gold)}
 
-/* About hero copy: "curtain brand in Bangladesh" links home + underline */
-.inner-hero a.home-link{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:rgba(226,197,154,.75);transition:color .25s,text-decoration-color .25s}
-.inner-hero a.home-link:hover{color:#fff;text-decoration-color:#fff}
+/* Inline home-page links (About hero copy, blog article body copy) + underline */
+.inner-hero a.home-link,.blog-article p a.home-link{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:rgba(226,197,154,.75);transition:color .25s,text-decoration-color .25s}
+.inner-hero a.home-link:hover,.blog-article p a.home-link:hover{color:#fff;text-decoration-color:#fff}
 
 /* About contact section (doc copy) */
 .page-cta .signature{font-family:var(--serif);font-style:italic;color:#d8bd92;font-size:clamp(1.15rem,1.6vw,1.5rem);margin-top:6px}
