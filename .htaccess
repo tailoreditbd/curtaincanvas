@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^project/our-completed-curtain-projects-in-bangladesh/?$ /curtaincanvas/project/ [R=301,L]
