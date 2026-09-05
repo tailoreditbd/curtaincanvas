@@ -21,6 +21,9 @@
 .editorial-copy p{color:rgba(255,255,255,.88)}
 .editorial-copy h2{margin:15px 0 25px}
 .editorial-split>.editorial-cta{grid-column:1/-1;justify-self:center}
+.reviews-section .inner-heading{max-width:none}
+.reviews-section .inner-heading>p{max-width:none}
+.reviews-section .video-carousel{max-width:none;width:100%}
 /* Section-level H3 headings (document heading order preserved) */
 .inner-heading .section-h3,.editorial-copy .section-h3{font-size:clamp(1.9rem,3.4vw,3.4rem);letter-spacing:-.035em;margin:15px 0 22px}
 .luxury-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
