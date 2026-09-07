@@ -74,6 +74,11 @@
     awaitingResponse = false;
     window.clearTimeout(responseTimeout);
     restoreForm(button);
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'consultation_form_success',
+      form_name: 'curtain_consultation'
+    });
     setStatus('Thank you. Your request has been sent; our team will contact you soon.', 'success');
   };
 
