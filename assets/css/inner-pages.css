@@ -180,3 +180,6 @@
 .blog-article h3 .latin,
 .blog-article .inner-faq .accordion-button .latin,
 .blog-page .blog-card h3 .latin{font-size:1.16em}
+/* Underlined links inside editorial page copy */
+.inline-link { color: inherit; text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: currentColor; }
+.inline-link:hover { color: var(--gold); text-decoration-color: var(--gold); }
