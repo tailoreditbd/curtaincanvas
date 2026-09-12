@@ -209,7 +209,7 @@
 .page-breadcrumb-banner .breadcrumbs a { color: #fff; text-decoration: none; }
 .page-breadcrumb-banner .breadcrumbs a:hover { color: var(--gold); }
 .page-breadcrumb-banner .breadcrumbs li[aria-current="page"] { color: #fff; }
-.page-breadcrumb-banner .breadcrumbs li + li::before { content: "›"; margin: 0 13px; color: #fff; font-size: 24px; font-weight: 400; line-height: 1; }
+.page-breadcrumb-banner .breadcrumbs li + li::before { content: "\203A"; margin: 0 13px; color: #fff; font-size: 24px; font-weight: 400; line-height: 1; }
 .page-breadcrumb-banner + .inner-hero { min-height: auto; padding: 88px 0; align-items: flex-start; border-top: 0; background: #0b0907; }
 .page-breadcrumb-banner + .inner-hero .inner-hero-media, .page-breadcrumb-banner + .inner-hero .inner-hero-shade { display: none; }
 @media (min-width: 1400px) and (max-width: 1599.98px) { .page-breadcrumb-title { font-size: 62px; } }
