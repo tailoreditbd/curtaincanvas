@@ -36,6 +36,8 @@
 .luxury-card p{font-size:.78rem;color:rgba(255,255,255,.82)}
 .service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1)}
 .service-card{padding:38px;background:#0d0b09;transition:background .3s,transform .3s}
+.service-grid>a.service-card{display:block;color:inherit;text-decoration:none}
+.service-grid>a.service-card:focus-visible{outline:2px solid var(--gold);outline-offset:-4px}
 .service-card:hover{background:#17120d;transform:translateY(-4px)}
 .service-card span{display:block;color:var(--gold);font-family:var(--serif);font-size:1.4rem}
 .service-card h3{margin:14px 0}
