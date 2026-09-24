@@ -200,6 +200,7 @@ body{font-size:16px}
 .video-only-grid-two{grid-template-columns:repeat(2,minmax(0,1fr))}
 .video-only-grid .video-frame{width:100%;margin-inline:auto}
 .video-only-grid .video-frame-landscape{max-width:none}
+#completedProjectVideosCarousel .video-only-grid-two .video-frame-landscape{aspect-ratio:16/9;max-width:none}
 #clientReviewsCarousel .video-frame,
 #residentialClientReviewsCarousel .video-frame{max-width:none;aspect-ratio:16/9}
 .video-only-grid-one .video-frame-landscape{max-width:960px}
