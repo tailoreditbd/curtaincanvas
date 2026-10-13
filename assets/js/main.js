@@ -196,7 +196,7 @@
     residential: '../../collection/interior-based-curtains/residential-curtains-in-bangladesh/',
     commercial: '../../collection/interior-based-curtains/commercial-curtains/'
   };
-  document.querySelectorAll('.space-card').forEach((card) => {
+  document.querySelectorAll('.space-card, .luxury-card').forEach((card) => {
     const heading = card.querySelector('h3');
     if (!heading) return;
 
