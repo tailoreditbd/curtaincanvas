@@ -191,6 +191,37 @@
       });
     });
   });
+  // Make interior-type curtain cards behave like accessible links.
+  const interiorCardPages = {
+    residential: '../../collection/interior-based-curtains/residential-curtains-in-bangladesh/',
+    commercial: '../../collection/interior-based-curtains/commercial-curtains/'
+  };
+  document.querySelectorAll('.space-card').forEach((card) => {
+    const heading = card.querySelector('h3');
+    if (!heading) return;
+
+    const cardType = Object.keys(interiorCardPages).find((type) =>
+      heading.textContent.toLowerCase().includes(type)
+    );
+    if (!cardType) return;
+
+    const pageUrl = new URL(interiorCardPages[cardType], document.currentScript.src).href;
+    card.classList.add('space-card-clickable');
+    card.setAttribute('role', 'link');
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('aria-label', `${heading.textContent.trim()} - view collection`);
+
+    const openPage = () => window.location.assign(pageUrl);
+    card.addEventListener('click', (event) => {
+      if (event.target.closest('a, button')) return;
+      openPage();
+    });
+    card.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      event.preventDefault();
+      openPage();
+    });
+  });
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 })();
