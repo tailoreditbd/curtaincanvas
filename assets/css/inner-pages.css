@@ -287,7 +287,13 @@
 .commercial-curtains-page .inner-section p a:not(.btn),
 .commercial-curtains-page .inner-section li a,
 .hospitality-curtains-page .inner-section p a:not(.btn),
-.hospitality-curtains-page .inner-section li a {
+.hospitality-curtains-page .inner-section li a,
+.summer-curtains-page .inner-section p a:not(.btn),
+.summer-curtains-page .inner-section li a,
+.rainy-season-curtains-page .inner-section p a:not(.btn),
+.rainy-season-curtains-page .inner-section li a,
+.winter-curtains-page .inner-section p a:not(.btn),
+.winter-curtains-page .inner-section li a {
   text-decoration-line: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
@@ -299,7 +305,13 @@
 .commercial-curtains-page .inner-section p a:not(.btn):hover,
 .commercial-curtains-page .inner-section li a:hover,
 .hospitality-curtains-page .inner-section p a:not(.btn):hover,
-.hospitality-curtains-page .inner-section li a:hover {
+.hospitality-curtains-page .inner-section li a:hover,
+.summer-curtains-page .inner-section p a:not(.btn):hover,
+.summer-curtains-page .inner-section li a:hover,
+.rainy-season-curtains-page .inner-section p a:not(.btn):hover,
+.rainy-season-curtains-page .inner-section li a:hover,
+.winter-curtains-page .inner-section p a:not(.btn):hover,
+.winter-curtains-page .inner-section li a:hover {
   color: var(--gold);
   text-decoration-color: var(--gold);
 }

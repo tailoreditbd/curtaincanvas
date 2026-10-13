@@ -191,11 +191,14 @@
       });
     });
   });
-  // Make interior-type curtain cards behave like accessible links.
+  // Make linked curtain-category cards behave like accessible links.
   const interiorCardPages = {
     residential: '../../collection/interior-based-curtains/residential-curtains-in-bangladesh/',
     commercial: '../../collection/interior-based-curtains/commercial-curtains/',
-    hospitality: '../../collection/interior-based-curtains/hospitality-curtains/'
+    hospitality: '../../collection/interior-based-curtains/hospitality-curtains/',
+    summer: '../../collection/seasonal-curtains/summer-curtains/',
+    rainy: '../../collection/seasonal-curtains/rainy-season-curtains/',
+    winter: '../../collection/seasonal-curtains/winter-curtains/'
   };
   document.querySelectorAll('.space-card, .luxury-card').forEach((card) => {
     const heading = card.querySelector('h3');
