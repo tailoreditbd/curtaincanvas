@@ -194,7 +194,8 @@
   // Make interior-type curtain cards behave like accessible links.
   const interiorCardPages = {
     residential: '../../collection/interior-based-curtains/residential-curtains-in-bangladesh/',
-    commercial: '../../collection/interior-based-curtains/commercial-curtains/'
+    commercial: '../../collection/interior-based-curtains/commercial-curtains/',
+    hospitality: '../../collection/interior-based-curtains/hospitality-curtains/'
   };
   document.querySelectorAll('.space-card, .luxury-card').forEach((card) => {
     const heading = card.querySelector('h3');

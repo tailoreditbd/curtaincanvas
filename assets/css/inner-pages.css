@@ -285,7 +285,9 @@
 .residential-curtains-page .inner-section p a:not(.btn),
 .residential-curtains-page .inner-section li a,
 .commercial-curtains-page .inner-section p a:not(.btn),
-.commercial-curtains-page .inner-section li a {
+.commercial-curtains-page .inner-section li a,
+.hospitality-curtains-page .inner-section p a:not(.btn),
+.hospitality-curtains-page .inner-section li a {
   text-decoration-line: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
@@ -295,7 +297,9 @@
 .residential-curtains-page .inner-section p a:not(.btn):hover,
 .residential-curtains-page .inner-section li a:hover,
 .commercial-curtains-page .inner-section p a:not(.btn):hover,
-.commercial-curtains-page .inner-section li a:hover {
+.commercial-curtains-page .inner-section li a:hover,
+.hospitality-curtains-page .inner-section p a:not(.btn):hover,
+.hospitality-curtains-page .inner-section li a:hover {
   color: var(--gold);
   text-decoration-color: var(--gold);
 }
