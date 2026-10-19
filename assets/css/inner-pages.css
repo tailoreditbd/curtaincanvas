@@ -315,3 +315,11 @@
   color: var(--gold);
   text-decoration-color: var(--gold);
 }
+
+/* Preserve the original residential card layout without image effects. */
+.residential-raw-cards .space-card::after{display:none}
+.residential-raw-cards .space-card img,
+.residential-raw-cards .space-card:hover img{filter:none;transform:none;transition:none;box-shadow:none;opacity:1}
+
+/* Keep residential card descriptions in their original sentence case. */
+.residential-raw-cards .space-card span{text-transform:none}
