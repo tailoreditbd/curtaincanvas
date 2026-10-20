@@ -330,6 +330,7 @@
 /* Display the original commercial images without cropping or visual effects. */
 .commercial-curtain-cards .space-card img,
 .commercial-curtain-cards .space-card:hover img{filter:none;transform:none;box-shadow:none;opacity:1}
+.commercial-curtain-cards .space-card::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 37%,rgba(5,4,3,.94));pointer-events:none}
 .commercial-curtain-cards .space-card span{text-transform:none}
 .commercial-curtains-page .page-breadcrumb-banner{height:auto;aspect-ratio:1440 / 336}
 .commercial-curtains-page .page-breadcrumb-media img{height:auto;object-fit:contain}
