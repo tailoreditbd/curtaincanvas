@@ -326,3 +326,15 @@
 
 /* Keep residential card descriptions in their original sentence case. */
 .residential-raw-cards .space-card span{text-transform:none}
+
+/* Display the original commercial images without cropping or visual effects. */
+.commercial-curtain-cards .space-card img,
+.commercial-curtain-cards .space-card:hover img{filter:none;transform:none;box-shadow:none;opacity:1}
+.commercial-curtain-cards .space-card span{text-transform:none}
+.commercial-curtains-page .page-breadcrumb-banner{height:auto;aspect-ratio:1440 / 336}
+.commercial-curtains-page .page-breadcrumb-media img{height:auto;object-fit:contain}
+.commercial-curtains-page .page-breadcrumb-banner + .inner-hero .inner-hero-media{height:auto;min-height:0;max-width:640px;justify-self:center;overflow:visible}
+.commercial-curtains-page .page-breadcrumb-banner + .inner-hero .inner-hero-media img{position:static;height:auto;object-fit:contain}
+.commercial-curtains-page .page-breadcrumb-media img,
+.commercial-curtains-page .inner-hero-media img{filter:none;box-shadow:none;opacity:1;transform:none}
+@media(max-width:767.98px){.commercial-curtains-page .page-breadcrumb-title{font-size:clamp(18px,4.5vw,35px);margin-bottom:10px}.commercial-curtains-page .page-breadcrumb-banner .breadcrumbs{font-size:11px;gap:4px}.commercial-curtains-page .page-breadcrumb-banner .breadcrumbs li + li::before{margin:0 5px;font-size:14px}}
