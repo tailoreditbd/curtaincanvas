@@ -316,8 +316,7 @@
   text-decoration-color: var(--gold);
 }
 
-/* Preserve the original residential card layout without image effects. */
-.residential-raw-cards .space-card::after{display:none}
+/* Use the homepage card's bottom shade while preserving residential images. */
 .residential-raw-cards .space-card img,
 .residential-raw-cards .space-card:hover img{filter:none;transform:none;transition:none;box-shadow:none;opacity:1}
 
