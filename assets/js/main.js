@@ -23,7 +23,10 @@
   }
 
   const counters = document.querySelectorAll('[data-count]');
+  const startedCounters = new WeakSet();
   const runCounter = (element) => {
+    if (startedCounters.has(element)) return;
+    startedCounters.add(element);
     const target = Number(element.dataset.count);
     const duration = 1200;
     const startTime = performance.now();
@@ -45,8 +48,15 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.6 });
-    counters.forEach((counter) => counterObserver.observe(counter));
+    }, { threshold: 0 });
+    counters.forEach((counter) => {
+      const bounds = counter.getBoundingClientRect();
+      if (bounds.bottom > 0 && bounds.top < window.innerHeight && bounds.right > 0 && bounds.left < window.innerWidth) {
+        runCounter(counter);
+      } else {
+        counterObserver.observe(counter);
+      }
+    });
   } else {
     counters.forEach((counter) => {
       const target = Number(counter.dataset.count);
