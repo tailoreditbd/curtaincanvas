@@ -339,6 +339,8 @@
 .commercial-curtains-page .page-breadcrumb-media img,
 .commercial-curtains-page .inner-hero-media img{filter:none;box-shadow:none;opacity:1;transform:none}
 @media(max-width:767.98px){.commercial-curtains-page .page-breadcrumb-title{font-size:clamp(18px,4.5vw,35px);margin-bottom:10px}.commercial-curtains-page .page-breadcrumb-banner .breadcrumbs{font-size:11px;gap:4px}.commercial-curtains-page .page-breadcrumb-banner .breadcrumbs li + li::before{margin:0 5px;font-size:14px}}
+.hospitality-curtains-page .page-breadcrumb-banner + .inner-hero .inner-hero-media{height:auto;min-height:0;max-width:640px;justify-self:center;overflow:visible}
+.hospitality-curtains-page .page-breadcrumb-banner + .inner-hero .inner-hero-media img{position:static;height:auto;object-fit:contain}
 .projects-page .video-only-grid .video-frame{max-width:none;aspect-ratio:16/9}
 .projects-page .video-only-grid-one .video-frame{width:calc((100% - clamp(18px,2.4vw,34px))/2)}
 @media(max-width:767.98px){.projects-page .video-only-grid-one .video-frame{width:100%}}
