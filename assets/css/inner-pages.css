@@ -344,3 +344,22 @@
 .projects-page .video-only-grid .video-frame{max-width:none;aspect-ratio:16/9}
 .projects-page .video-only-grid-one .video-frame{width:calc((100% - clamp(18px,2.4vw,34px))/2)}
 @media(max-width:767.98px){.projects-page .video-only-grid-one .video-frame{width:100%}}
+
+/* Compact contact form, preserving all labels and help text. */
+.contact-page .contact-form-card{width:100%;max-width:620px;justify-self:end;padding:24px}
+.contact-page .consultation-form{gap:16px 18px}
+.contact-page .form-field{gap:6px;min-width:0}
+.contact-page .form-field input,.contact-page .form-field textarea,.contact-page .form-field select{padding-top:9px;padding-bottom:9px}
+.contact-page .form-field textarea{min-height:68px}
+.contact-page .file-upload-field{padding:14px}
+.contact-page .file-upload-field input[type="file"]{padding:6px 0}
+.contact-page .file-upload-field input[type="file"]::file-selector-button{padding:8px 12px}
+.contact-page .form-submit{padding:14px 20px;max-width:100%;white-space:normal}
+.contact-page .form-status:empty,.contact-page .selected-files:empty{display:none}
+.contact-page .form-note{line-height:1.55}
+@media(max-width:991.98px){.contact-page .contact-form-card{justify-self:start}}
+@media(max-width:575.98px){.contact-page .contact-form-card{padding:20px 16px}}
+/* Keep the four short field labels close to their controls. */
+.contact-page .form-field:not(.form-field-full){gap:2px}
+.contact-page .form-field:not(.form-field-full) label{margin-bottom:0}
+.contact-page .form-field:not(.form-field-full) input,.contact-page .form-field:not(.form-field-full) select{padding-top:3px;padding-bottom:6px}
