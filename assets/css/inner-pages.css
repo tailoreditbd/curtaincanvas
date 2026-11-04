@@ -21,6 +21,12 @@
 .luxury-fabric-blog .room-reference-table th:first-child{width:20%}
 .luxury-fabric-blog .room-reference-table th:nth-child(2){width:33%}
 .luxury-fabric-blog .room-reference-table tbody th{font-weight:400;text-align:left}
+.luxury-fabric-blog .winter-fabric-wrap{margin:28px 0 34px}
+.luxury-fabric-blog .winter-fabric-table{width:100%;min-width:850px;border-collapse:collapse;background:#0d0b09;color:#f2ead9}
+.luxury-fabric-blog .winter-fabric-table th,
+.luxury-fabric-blog .winter-fabric-table td{border:1px solid rgba(255,255,255,.18);padding:24px 18px;vertical-align:top;line-height:1.85}
+.luxury-fabric-blog .winter-fabric-table thead th{text-align:center;font-weight:600}
+.luxury-fabric-blog .winter-fabric-table tbody th{text-align:left;font-weight:400}
 .inner-section-light{background:linear-gradient(90deg,rgba(7,5,4,.94),rgba(7,5,4,.84) 52%,rgba(7,5,4,.76)),url("../img/hero-luxury-v2.jpg") center/cover no-repeat;color:#fff}
 .inner-section-light h2,.inner-section-light h3,.inner-section-light strong{color:#f4eee5}
 .inner-section-light p{color:rgba(255,255,255,.9)}
