@@ -405,3 +405,18 @@
 .contact-page .form-field:not(.form-field-full){gap:2px}
 .contact-page .form-field:not(.form-field-full) label{margin-bottom:0}
 .contact-page .form-field:not(.form-field-full) input,.contact-page .form-field:not(.form-field-full) select{padding-top:3px;padding-bottom:6px}
+/* Use the existing section typography for article text and table content. */
+.blackout-sheer-blog .blog-article .inner-section p:not(.eyebrow),
+.blackout-sheer-blog .blog-article .inner-section li,
+.blackout-sheer-blog .blog-article table th,
+.blackout-sheer-blog .blog-article table td{
+  font-family:inherit;
+  font-size:inherit;
+  font-weight:inherit;
+  letter-spacing:inherit;
+  line-height:2;
+}
+.blackout-sheer-blog .blog-article table thead th{font-weight:600}
+.blackout-sheer-blog .blog-article table p{margin:0}
+.blackout-sheer-blog .blog-article h2 strong,
+.blackout-sheer-blog .blog-article h3 strong{font-weight:400}
