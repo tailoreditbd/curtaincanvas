@@ -27,6 +27,30 @@
 .luxury-fabric-blog .winter-fabric-table td{border:1px solid rgba(255,255,255,.18);padding:24px 18px;vertical-align:top;line-height:1.85}
 .luxury-fabric-blog .winter-fabric-table thead th{text-align:center;font-weight:600}
 .luxury-fabric-blog .winter-fabric-table tbody th{text-align:left;font-weight:400}
+.luxury-fabric-blog .room-reference-wrap,
+.luxury-fabric-blog .winter-fabric-wrap{display:block;width:100%;max-width:100%;min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:var(--gold) #0d0b09}
+.luxury-fabric-blog .room-reference-wrap:focus-visible,
+.luxury-fabric-blog .winter-fabric-wrap:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+@media(max-width:767.98px){
+  .luxury-fabric-blog .room-reference-wrap,
+  .luxury-fabric-blog .winter-fabric-wrap{overflow:visible}
+  .luxury-fabric-blog .room-reference-table,
+  .luxury-fabric-blog .winter-fabric-table{display:block;min-width:0;table-layout:auto;background:transparent}
+  .luxury-fabric-blog .room-reference-table thead,
+  .luxury-fabric-blog .winter-fabric-table thead{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%)}
+  .luxury-fabric-blog .room-reference-table tbody,
+  .luxury-fabric-blog .winter-fabric-table tbody{display:block;width:100%}
+  .luxury-fabric-blog .room-reference-table tr,
+  .luxury-fabric-blog .winter-fabric-table tr{display:block;margin-bottom:18px;border:1px solid rgba(255,255,255,.18);background:#0d0b09}
+  .luxury-fabric-blog .room-reference-table th,
+  .luxury-fabric-blog .room-reference-table td,
+  .luxury-fabric-blog .winter-fabric-table th,
+  .luxury-fabric-blog .winter-fabric-table td{display:block;width:100%!important;border:0;padding:14px 16px;font-size:.9rem;line-height:1.65;white-space:normal;overflow-wrap:break-word}
+  .luxury-fabric-blog .room-reference-table td,
+  .luxury-fabric-blog .winter-fabric-table td{border-top:1px solid rgba(255,255,255,.1)}
+  .luxury-fabric-blog .room-reference-table [data-label]::before,
+  .luxury-fabric-blog .winter-fabric-table [data-label]::before{content:attr(data-label);display:block;margin-bottom:5px;color:var(--gold);font-weight:600;font-size:.8rem}
+}
 .inner-section-light{background:linear-gradient(90deg,rgba(7,5,4,.94),rgba(7,5,4,.84) 52%,rgba(7,5,4,.76)),url("../img/hero-luxury-v2.jpg") center/cover no-repeat;color:#fff}
 .inner-section-light h2,.inner-section-light h3,.inner-section-light strong{color:#f4eee5}
 .inner-section-light p{color:rgba(255,255,255,.9)}
