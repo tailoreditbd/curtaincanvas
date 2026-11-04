@@ -9,6 +9,10 @@
 .inner-hero h1{font-size:clamp(3.4rem,6.6vw,7.2rem);margin:0 0 28px;max-width:950px}
 .inner-hero-copy{max-width:760px;font-size:1rem;color:rgba(255,255,255,.9)}
 .inner-section{padding:clamp(58px,5.5vw,88px) 0;border-top:1px solid rgba(255,255,255,.06)}
+.luxury-fabric-blog .blog-article .inner-section{padding:32px 0}
+.luxury-fabric-blog .blog-article .inner-section > .container-wide > h3:first-child{margin-top:0}
+.luxury-fabric-blog .blog-article p a:not(.btn),
+.luxury-fabric-blog .blog-article li a:not(.btn){text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
 .inner-section-light{background:linear-gradient(90deg,rgba(7,5,4,.94),rgba(7,5,4,.84) 52%,rgba(7,5,4,.76)),url("../img/hero-luxury-v2.jpg") center/cover no-repeat;color:#fff}
 .inner-section-light h2,.inner-section-light h3,.inner-section-light strong{color:#f4eee5}
 .inner-section-light p{color:rgba(255,255,255,.9)}
