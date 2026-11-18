@@ -217,9 +217,10 @@
     const cardType = Object.keys(interiorCardPages).find((type) =>
       heading.textContent.toLowerCase().includes(type)
     );
-    if (!cardType) return;
+    const cardPage = card.dataset.cardHref || interiorCardPages[cardType];
+    if (!cardPage) return;
 
-    const pageUrl = new URL(interiorCardPages[cardType], document.currentScript.src).href;
+    const pageUrl = new URL(cardPage, document.currentScript.src).href;
     card.classList.add('space-card-clickable');
     card.setAttribute('role', 'link');
     card.setAttribute('tabindex', '0');
