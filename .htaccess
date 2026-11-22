@@ -1,6 +1,10 @@
 RewriteEngine On
 RewriteCond %{REQUEST_URI} ^(.*)/collection/(.*)$
 RewriteRule ^collection/(.*)$ %1/curtain-collection/%2 [R=301,L]
-RewriteRule ^project/our-completed-curtain-projects-in-bangladesh/?$ /curtaincanvas/project/ [R=301,L]
 RewriteCond %{REQUEST_URI} ^(.*/)about/(?:reviews|curtain-canvas-reviews)/?$
-RewriteRule ^about/(?:reviews|curtain-canvas-reviews)/?$ %1project/client-reviews/ [R=301,L]
+RewriteRule ^about/(?:reviews|curtain-canvas-reviews)/?$ %1our-project/client-reviews/ [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^(.*/)project(?:/|$)
+RewriteRule ^project(?:/(.*))?$ %1our-project/$1 [R=301,L]
+RewriteCond %{REQUEST_URI} ^(.*/)our-project/our-completed-curtain-projects-in-bangladesh/?$
+RewriteRule ^our-project/our-completed-curtain-projects-in-bangladesh/?$ %1our-project/ [R=301,L]
