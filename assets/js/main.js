@@ -215,8 +215,7 @@
     updateControls();
     startAutoMove();
   });
-  const reviewsPageCarousel = document.getElementById('reviewsPageClientCarousel');
-  if (reviewsPageCarousel) {
+  document.querySelectorAll('#reviewsPageClientCarousel, #residentialClientReviewsCarousel, #completedProjectVideosCarousel').forEach((reviewsPageCarousel) => {
     const mobileReviews = window.matchMedia('(max-width: 767.98px)');
     const inner = reviewsPageCarousel.querySelector('.carousel-inner');
     const frames = [...inner.querySelectorAll('.video-frame')];
@@ -231,7 +230,7 @@
         slide.className = 'carousel-item';
         slide.classList.toggle('active', Math.floor(index / perSlide) === Math.floor(currentIndex / perSlide));
         const grid = document.createElement('div');
-        grid.className = `video-only-grid video-only-grid-${perSlide === 1 ? 'one' : 'two'}`;
+        grid.className = `video-only-grid video-only-grid-${Math.min(perSlide, frames.length - index) === 1 ? 'one' : 'two'}`;
         frames.slice(index, index + perSlide).forEach((frame) => grid.append(frame));
         slide.append(grid);
         slides.append(slide);
@@ -241,7 +240,7 @@
     };
     arrangeReviews();
     mobileReviews.addEventListener('change', arrangeReviews);
-  }
+  });
   document.querySelectorAll('.video-carousel').forEach((carousel) => {
     carousel.addEventListener('slide.bs.carousel', () => {
       carousel.querySelectorAll('iframe[src*="youtube.com/embed/"]').forEach((frame) => {
