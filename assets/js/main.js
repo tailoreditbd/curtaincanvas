@@ -6,6 +6,30 @@
   setHeader();
   window.addEventListener('scroll', setHeader, { passive: true });
 
+  const hoverNavigation = window.matchMedia('(min-width: 992px) and (hover: hover) and (pointer: fine)');
+  document.querySelectorAll('.navbar .nav-item.dropdown').forEach((item) => {
+    const toggle = item.querySelector(':scope > [data-bs-toggle="dropdown"]');
+    if (!toggle || !window.bootstrap?.Dropdown) return;
+    const dropdown = window.bootstrap.Dropdown.getOrCreateInstance(toggle);
+    let closeTimer;
+    item.addEventListener('mouseenter', () => {
+      if (!hoverNavigation.matches) return;
+      clearTimeout(closeTimer);
+      document.querySelectorAll('.navbar .nav-item.dropdown > [data-bs-toggle="dropdown"][aria-expanded="true"]').forEach((other) => {
+        if (other !== toggle) window.bootstrap.Dropdown.getOrCreateInstance(other).hide();
+      });
+      dropdown.show();
+    });
+    item.addEventListener('mouseleave', () => {
+      if (!hoverNavigation.matches) return;
+      closeTimer = setTimeout(() => dropdown.hide(), 180);
+    });
+    hoverNavigation.addEventListener('change', () => {
+      clearTimeout(closeTimer);
+      dropdown.hide();
+    });
+  });
+
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const reveals = document.querySelectorAll('.reveal');
   if (reduceMotion || !('IntersectionObserver' in window)) {
