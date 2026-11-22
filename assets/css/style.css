@@ -110,6 +110,11 @@ p{color:rgba(255,255,255,.9)}
 .hero-background:nth-child(2) img{object-position:center 43%}
 .hero-background:nth-child(3) img{object-position:center 55%}
 .hero-background:nth-child(4) img{object-position:center 48%}
+@media(min-width:768px){
+  .hero-background:nth-child(5) img{filter:none;transform-origin:right center}
+  .hero-background:nth-child(5).active img{animation-name:heroCertificateMotion}
+  .hero:has(.hero-background:nth-child(5).active) .hero-shade{background:linear-gradient(90deg,rgba(3,3,2,.65) 0%,rgba(4,3,2,.35) 45%,transparent 68%),linear-gradient(0deg,rgba(6,5,3,.75),transparent 25%)}
+}
 @media(max-width:767.98px){
   .hero-background:nth-child(5) img{object-position:94% 43%}
   .hero:has(.hero-background:nth-child(5).active) .hero-shade{background:linear-gradient(90deg,rgba(3,3,2,.72),rgba(4,3,2,.55) 72%,rgba(5,4,3,.35)),linear-gradient(0deg,rgba(6,5,3,.97),transparent 62%)}
@@ -180,6 +185,7 @@ body{font-size:16px}
 .hero-carousel .carousel-item.active>.d-flex{animation:heroContentReveal .82s .58s ease-out both}
 @keyframes heroContentReveal{to{opacity:1;transform:translate3d(0,0,0)}}
 @keyframes heroImageMotion{from{transform:scale(1.055) translate3d(-.4%,0,0)}to{transform:scale(1) translate3d(0,0,0)}}
+@keyframes heroCertificateMotion{from{transform:translate3d(0,0,0)}to{transform:translate3d(-1.5%,0,0)}}
 
 .video-stories{position:relative;overflow:hidden;background:radial-gradient(circle at 50% 0,rgba(184,138,74,.11),transparent 38%),#090806}
 .studio-video-section{border-top:1px solid rgba(255,255,255,.07);background:radial-gradient(circle at 80% 0,rgba(117,78,38,.13),transparent 35%),#0b0907}
