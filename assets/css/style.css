@@ -111,7 +111,10 @@ p{color:rgba(255,255,255,.9)}
 .hero-background:nth-child(3) img{object-position:center 55%}
 .hero-background:nth-child(4) img{object-position:center 48%}
 @media(min-width:768px){
-  .hero-background:nth-child(5) img{filter:none;transform-origin:right center}
+  .hero-background:nth-child(5) img{filter:none;transform-origin:right center;object-fit:contain;object-position:right center}
+  #heroCarousel .carousel-item:nth-child(5) .hero-heading{max-width:64%}
+  #heroCarousel .carousel-item:nth-child(5) .hero-copy{max-width:min(640px,64%)}
+  .hero-certificate-break{display:block}
   .hero-background:nth-child(5).active img{animation-name:heroCertificateMotion}
   .hero:has(.hero-background:nth-child(5).active) .hero-shade{background:linear-gradient(90deg,rgba(3,3,2,.65) 0%,rgba(4,3,2,.35) 45%,transparent 68%),linear-gradient(0deg,rgba(6,5,3,.75),transparent 25%)}
 }
