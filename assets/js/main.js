@@ -215,6 +215,33 @@
     updateControls();
     startAutoMove();
   });
+  const reviewsPageCarousel = document.getElementById('reviewsPageClientCarousel');
+  if (reviewsPageCarousel) {
+    const mobileReviews = window.matchMedia('(max-width: 767.98px)');
+    const inner = reviewsPageCarousel.querySelector('.carousel-inner');
+    const frames = [...inner.querySelectorAll('.video-frame')];
+    const arrangeReviews = () => {
+      const currentFrame = inner.querySelector('.carousel-item.active .video-frame');
+      const currentIndex = Math.max(0, frames.indexOf(currentFrame));
+      window.bootstrap?.Carousel.getInstance(reviewsPageCarousel)?.dispose();
+      const perSlide = mobileReviews.matches ? 1 : 2;
+      const slides = document.createDocumentFragment();
+      for (let index = 0; index < frames.length; index += perSlide) {
+        const slide = document.createElement('div');
+        slide.className = 'carousel-item';
+        slide.classList.toggle('active', Math.floor(index / perSlide) === Math.floor(currentIndex / perSlide));
+        const grid = document.createElement('div');
+        grid.className = `video-only-grid video-only-grid-${perSlide === 1 ? 'one' : 'two'}`;
+        frames.slice(index, index + perSlide).forEach((frame) => grid.append(frame));
+        slide.append(grid);
+        slides.append(slide);
+      }
+      inner.replaceChildren(slides);
+      window.bootstrap?.Carousel.getOrCreateInstance(reviewsPageCarousel);
+    };
+    arrangeReviews();
+    mobileReviews.addEventListener('change', arrangeReviews);
+  }
   document.querySelectorAll('.video-carousel').forEach((carousel) => {
     carousel.addEventListener('slide.bs.carousel', () => {
       carousel.querySelectorAll('iframe[src*="youtube.com/embed/"]').forEach((frame) => {
