@@ -110,6 +110,10 @@ p{color:rgba(255,255,255,.9)}
 .hero-background:nth-child(2) img{object-position:center 43%}
 .hero-background:nth-child(3) img{object-position:center 55%}
 .hero-background:nth-child(4) img{object-position:center 48%}
+@media(max-width:767.98px){
+  .hero-background:nth-child(5) img{object-position:94% 43%}
+  .hero:has(.hero-background:nth-child(5).active) .hero-shade{background:linear-gradient(90deg,rgba(3,3,2,.72),rgba(4,3,2,.55) 72%,rgba(5,4,3,.35)),linear-gradient(0deg,rgba(6,5,3,.97),transparent 62%)}
+}
 .hero-shade{z-index:1}
 .hero-content,.hero-stats{z-index:2}
 @media(prefers-reduced-motion:reduce){.hero-background{transition:none}}
