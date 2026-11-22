@@ -143,13 +143,14 @@
     let autoMoveTimer = null;
     let isPaused = false;
 
-    if (!viewport || cards.length <= 3) {
+    if (!viewport || cards.length <= 1) {
       controls?.setAttribute('hidden', '');
       return;
     }
 
     const updateControls = () => {
       const maxScroll = viewport.scrollWidth - viewport.clientWidth;
+      controls?.toggleAttribute('hidden', maxScroll <= 2);
       previous.disabled = viewport.scrollLeft <= 2;
       next.disabled = viewport.scrollLeft >= maxScroll - 2;
     };
@@ -162,7 +163,7 @@
     };
     const startAutoMove = () => {
       stopAutoMove();
-      if (reduceMotion || isPaused || document.hidden) return;
+      if (reduceMotion || isPaused || document.hidden || viewport.scrollWidth <= viewport.clientWidth + 2) return;
       autoMoveTimer = window.setInterval(() => {
         const maxScroll = viewport.scrollWidth - viewport.clientWidth;
         if (viewport.scrollLeft >= maxScroll - 2) {
