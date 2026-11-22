@@ -8,3 +8,6 @@ RewriteCond %{REQUEST_URI} ^(.*/)project(?:/|$)
 RewriteRule ^project(?:/(.*))?$ %1our-project/$1 [R=301,L]
 RewriteCond %{REQUEST_URI} ^(.*/)our-project/our-completed-curtain-projects-in-bangladesh/?$
 RewriteRule ^our-project/our-completed-curtain-projects-in-bangladesh/?$ %1our-project/ [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^(.*/)contact-us(?:/|$)
+RewriteRule ^contact-us(?:/(.*))?$ %1about/contact-us/$1 [R=301,L]
