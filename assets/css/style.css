@@ -120,6 +120,11 @@ p{color:rgba(255,255,255,.9)}
 }
 @media(max-width:767.98px){
   .hero-background:nth-child(5) img{object-position:94% 43%}
+  .hero:has(.hero-background:nth-child(5).active) .hero-content{width:calc(100% - 24px);padding-inline:0}
+  #heroCarousel .carousel-item:nth-child(5) .hero-heading{max-width:100%;overflow-wrap:normal;word-break:normal;hyphens:none}
+  #heroCarousel .hero-certificate-line{display:block;white-space:nowrap}
+  #heroCarousel .carousel-item:nth-child(5) .hero-copy{max-width:100%;overflow-wrap:anywhere}
+  #heroCarousel .carousel-item:nth-child(5) .btn{max-width:100%;white-space:normal;overflow-wrap:normal}
   .hero:has(.hero-background:nth-child(5).active) .hero-shade{background:linear-gradient(90deg,rgba(3,3,2,.72),rgba(4,3,2,.55) 72%,rgba(5,4,3,.35)),linear-gradient(0deg,rgba(6,5,3,.97),transparent 62%)}
 }
 .hero-shade{z-index:1}
